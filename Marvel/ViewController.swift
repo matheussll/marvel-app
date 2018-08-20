@@ -12,6 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        APIClient.characters { result in
+            switch result {
+            case .success(let data):
+                print (data)
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
