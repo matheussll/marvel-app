@@ -8,14 +8,21 @@
 
 import Foundation
 
-fileprivate let key = "5a72d5f7ba15284dfa8a2bf58691c8aa"
-fileprivate let pkey = "73314080bc75e11b8429c4b771e092063a995871"
+fileprivate func getPlistValue(_ value: String) -> Any {
+    guard let plist = Bundle.main.infoDictionary, let plistValue = plist[value] else {
+            return ""
+    }
+    return plistValue
+}
+
+fileprivate let key = getPlistValue("MarvelPublicKey") as? String ?? ""
+fileprivate let pkey = getPlistValue("MarvelPrivateKey") as? String ?? ""
 fileprivate let timestamp = Int(NSDate().timeIntervalSince1970)
 fileprivate let hash = (String(timestamp)+pkey+key).MD5
 
 struct K {
     static let baseURL = "https://gateway.marvel.com:443/v1/public"
-    static let encodingParams: [String: Any] = [
+    static var encodingParams: [String: Any] = [
         "apikey": key,
         "ts": timestamp,
         "hash": hash

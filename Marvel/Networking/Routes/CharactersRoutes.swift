@@ -12,7 +12,7 @@ import Alamofire
 enum CharactersRoutes: APIConfig {
     
     // MARK: - Routes
-    case list()
+    case list(offset: Int)
     
     // MARK: - HTTPMethod
     var method: HTTPMethod {
@@ -31,7 +31,10 @@ enum CharactersRoutes: APIConfig {
     // MARK: - Parameters
     var parameters: Parameters? {
         switch self {
-            case .list: return K.encodingParams
+            case .list(let offset):
+                var params : [String: Any] = ["offset": offset]
+                params.merge(K.encodingParams) { (current, _) in current }
+                return params
         }
     }
 }

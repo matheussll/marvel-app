@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 extension APIClient {
-    static func characters(completion:@escaping (Result<Characters>) -> Void) {
-        performRequest(route: CharactersRoutes.list(), completion: completion)
+    static func characters(offset: Int, completion:@escaping (Result<Characters>) -> Void) {
+        performRequest(route: CharactersRoutes.list(offset: offset), completion: completion)
     }
 }
