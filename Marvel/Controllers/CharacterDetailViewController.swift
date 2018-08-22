@@ -29,7 +29,7 @@ class CharacterDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarTransparent(transparent: true, animated: false)
-        self.navigationController?.navigationBar.tintColor = .yellow
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,11 +53,11 @@ class CharacterDetailViewController: UIViewController {
         
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
-         let labelHeight = viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont(name: "Trebuchet MS", size: 15) ?? UIFont.systemFont(ofSize: 15))
+         let labelHeight = viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
         
-        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200 + labelHeight + (labelHeight > 0 ? 50 : 0))
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200 + labelHeight + (labelHeight > 0 ? 55 : 15))
 
-        let view = CharacterDetailTableViewSectionHeader(frame: frame)
+        let view = CharacterDetailTableViewHeader(frame: frame)
         view.descriptionLabel.text = viewModel.characterDescription
         self.tableView.tableHeaderView = view
     }
@@ -84,10 +84,8 @@ extension CharacterDetailViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
-        
-        return view
+        let headerView = CharacterDetailTableViewSectionHeader()
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

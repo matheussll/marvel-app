@@ -2,16 +2,17 @@
 //  CharacterDetailTableViewSectionHeader.swift
 //  Marvel
 //
-//  Created by Matheus Stefanello Luz on 22/08/18.
+//  Created by Matheus Stefanello Luz on 21/08/18.
 //  Copyright © 2018 msluz. All rights reserved.
 //
 
 import UIKit
 
-class CharacterDetailTableViewSectionHeader: UIView {
+class CharacterDetailTableViewHeader: UIView {
 
-    @IBOutlet weak var comicsLabel: UILabel!
     @IBOutlet var contentView: UIView!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +25,7 @@ class CharacterDetailTableViewSectionHeader: UIView {
     }
     
     func customInit() {
-        Bundle.main.loadNibNamed("CharacterDetailTableViewSectionHeader", owner: self, options: nil)
+        Bundle.main.loadNibNamed("CharacterDetailTableViewHeader", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

@@ -96,15 +96,42 @@
 		40BEAFE9212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFE8212CD4F4006D8B04 /* UINavigationController+Transparency.swift */; };
 		40BEAFEA212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFE8212CD4F4006D8B04 /* UINavigationController+Transparency.swift */; };
 		40BEAFEB212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFE8212CD4F4006D8B04 /* UINavigationController+Transparency.swift */; };
-		40BEAFEE212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
-		40BEAFEF212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
-		40BEAFF0212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
-		40BEAFF2212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
-		40BEAFF3212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
-		40BEAFF4212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
+		40BEAFEE212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib */; };
+		40BEAFEF212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib */; };
+		40BEAFF0212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib */; };
+		40BEAFF2212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift */; };
+		40BEAFF3212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift */; };
+		40BEAFF4212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift */; };
 		40BEAFF7212CFB37006D8B04 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF6212CFB37006D8B04 /* String+Height.swift */; };
 		40BEAFF8212CFB37006D8B04 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF6212CFB37006D8B04 /* String+Height.swift */; };
 		40BEAFF9212CFB37006D8B04 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFF6212CFB37006D8B04 /* String+Height.swift */; };
+		40BEAFFC212D8844006D8B04 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFFB212D8844006D8B04 /* AppCoordinator.swift */; };
+		40BEAFFD212D8844006D8B04 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFFB212D8844006D8B04 /* AppCoordinator.swift */; };
+		40BEAFFE212D8844006D8B04 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEAFFB212D8844006D8B04 /* AppCoordinator.swift */; };
+		40BEB004212D886C006D8B04 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB003212D886C006D8B04 /* Coordinator.swift */; };
+		40BEB005212D886C006D8B04 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB003212D886C006D8B04 /* Coordinator.swift */; };
+		40BEB006212D886C006D8B04 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB003212D886C006D8B04 /* Coordinator.swift */; };
+		40BEB008212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB007212D88A9006D8B04 /* CharactersCoordinator.swift */; };
+		40BEB009212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB007212D88A9006D8B04 /* CharactersCoordinator.swift */; };
+		40BEB00A212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB007212D88A9006D8B04 /* CharactersCoordinator.swift */; };
+		40BEB00C212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00B212D8C0A006D8B04 /* CharacterDetailCoordinator.swift */; };
+		40BEB00D212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00B212D8C0A006D8B04 /* CharacterDetailCoordinator.swift */; };
+		40BEB00E212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00B212D8C0A006D8B04 /* CharacterDetailCoordinator.swift */; };
+		40BEB010212D8D23006D8B04 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00F212D8D23006D8B04 /* AppNavigationController.swift */; };
+		40BEB011212D8D23006D8B04 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00F212D8D23006D8B04 /* AppNavigationController.swift */; };
+		40BEB012212D8D23006D8B04 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB00F212D8D23006D8B04 /* AppNavigationController.swift */; };
+		40BEB014212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB013212D8DBB006D8B04 /* UIFont+AppFont.swift */; };
+		40BEB015212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB013212D8DBB006D8B04 /* UIFont+AppFont.swift */; };
+		40BEB016212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB013212D8DBB006D8B04 /* UIFont+AppFont.swift */; };
+		40BEB01A212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
+		40BEB01B212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
+		40BEB01C212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */; };
+		40BEB01E212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
+		40BEB01F212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
+		40BEB020212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */; };
+		40BEB022212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
+		40BEB023212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
+		40BEB024212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,9 +209,18 @@
 		40BEAFE0212CD3D0006D8B04 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		40BEAFE1212CD3D0006D8B04 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		40BEAFE8212CD4F4006D8B04 /* UINavigationController+Transparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparency.swift"; sourceTree = "<group>"; };
-		40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewSectionHeader.xib; sourceTree = "<group>"; };
-		40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewHeader.xib; sourceTree = "<group>"; };
+		40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewHeader.swift; sourceTree = "<group>"; };
 		40BEAFF6212CFB37006D8B04 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
+		40BEAFFB212D8844006D8B04 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		40BEB003212D886C006D8B04 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		40BEB007212D88A9006D8B04 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
+		40BEB00B212D8C0A006D8B04 /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
+		40BEB00F212D8D23006D8B04 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		40BEB013212D8DBB006D8B04 /* UIFont+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFont.swift"; sourceTree = "<group>"; };
+		40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewSectionHeader.swift; sourceTree = "<group>"; };
+		40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewSectionHeader.xib; sourceTree = "<group>"; };
+		40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +281,7 @@
 		3A7D0C13212B306E00F393CE /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				40BEAFFA212D8812006D8B04 /* Coordinators */,
 				3A7D0CAA212C20B200F393CE /* Controllers */,
 				3A7D0CA9212C209800F393CE /* Views */,
 				3A7D0CA0212C17EC00F393CE /* ViewModels */,
@@ -341,6 +378,8 @@
 				40BEAFD1212CC79F006D8B04 /* String+Thumbnail.swift */,
 				40BEAFE8212CD4F4006D8B04 /* UINavigationController+Transparency.swift */,
 				40BEAFF6212CFB37006D8B04 /* String+Height.swift */,
+				40BEB013212D8DBB006D8B04 /* UIFont+AppFont.swift */,
+				40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,8 +407,9 @@
 		3A7D0CA9212C209800F393CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40BEB017212D915B006D8B04 /* CharacterDetailTableViewSectionHeader */,
 				40BEAFF5212CED64006D8B04 /* ComicsTableViewCell */,
-				40BEAFEC212CEA14006D8B04 /* CharacterDetailTableViewSectionHeader */,
+				40BEAFEC212CEA14006D8B04 /* CharacterDetailTableViewHeader */,
 				40BEAFD6212CCFE4006D8B04 /* CollectionViewFooter */,
 				40BEAFD5212CCFA0006D8B04 /* CharacterDetailStickyHeader */,
 				3A7D0CB3212C228000F393CE /* CharactersCollectionViewCell */,
@@ -384,6 +424,7 @@
 			children = (
 				3A7D0CAB212C20CE00F393CE /* CharactersViewController.swift */,
 				40BEAFE0212CD3D0006D8B04 /* CharacterDetailViewController.swift */,
+				40BEB00F212D8D23006D8B04 /* AppNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -415,13 +456,13 @@
 			path = CollectionViewFooter;
 			sourceTree = "<group>";
 		};
-		40BEAFEC212CEA14006D8B04 /* CharacterDetailTableViewSectionHeader */ = {
+		40BEAFEC212CEA14006D8B04 /* CharacterDetailTableViewHeader */ = {
 			isa = PBXGroup;
 			children = (
-				40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib */,
-				40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift */,
+				40BEAFED212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib */,
+				40BEAFF1212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift */,
 			);
-			path = CharacterDetailTableViewSectionHeader;
+			path = CharacterDetailTableViewHeader;
 			sourceTree = "<group>";
 		};
 		40BEAFF5212CED64006D8B04 /* ComicsTableViewCell */ = {
@@ -429,6 +470,26 @@
 			children = (
 			);
 			path = ComicsTableViewCell;
+			sourceTree = "<group>";
+		};
+		40BEAFFA212D8812006D8B04 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				40BEAFFB212D8844006D8B04 /* AppCoordinator.swift */,
+				40BEB003212D886C006D8B04 /* Coordinator.swift */,
+				40BEB007212D88A9006D8B04 /* CharactersCoordinator.swift */,
+				40BEB00B212D8C0A006D8B04 /* CharacterDetailCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		40BEB017212D915B006D8B04 /* CharacterDetailTableViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */,
+				40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */,
+			);
+			path = CharacterDetailTableViewSectionHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,9 +603,10 @@
 				3A7D0CB9212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCA212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
 				40BEAFD9212CD026006D8B04 /* CharacterDetailStickyHeader.xib in Resources */,
-				40BEAFEE212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
+				40BEAFEE212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
 				40BEAFE5212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
 				3A7D0CB0212C20CE00F393CE /* CharactersViewController.xib in Resources */,
+				40BEB01E212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
 				3A7D0C1F212B307000F393CE /* LaunchScreen.storyboard in Resources */,
 				3A7D0C1C212B307000F393CE /* Assets.xcassets in Resources */,
 			);
@@ -555,9 +617,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40BEAFDA212CD026006D8B04 /* CharacterDetailStickyHeader.xib in Resources */,
+				40BEB01F212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
 				3A7D0CBA212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCB212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
-				40BEAFEF212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
+				40BEAFEF212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
 				40BEAFE6212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
 				3A7D0CB1212C20CE00F393CE /* CharactersViewController.xib in Resources */,
 			);
@@ -568,9 +631,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40BEAFDB212CD026006D8B04 /* CharacterDetailStickyHeader.xib in Resources */,
+				40BEB020212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
 				3A7D0CBB212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCC212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
-				40BEAFF0212CEA3B006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
+				40BEAFF0212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
 				40BEAFE7212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
 				3A7D0CB2212C20CE00F393CE /* CharactersViewController.xib in Resources */,
 			);
@@ -589,21 +653,29 @@
 				3A7D0C86212B435D00F393CE /* CharactersRoutes.swift in Sources */,
 				40BEAFDD212CD032006D8B04 /* CharacterDetailStickyHeader.swift in Sources */,
 				40BEAFE9212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */,
+				40BEAFFC212D8844006D8B04 /* AppCoordinator.swift in Sources */,
+				40BEB014212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */,
 				40BEAFE2212CD3D0006D8B04 /* CharacterDetailViewController.swift in Sources */,
+				40BEB004212D886C006D8B04 /* Coordinator.swift in Sources */,
+				40BEB01A212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEB022212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */,
 				3A7D0CB6212C22A600F393CE /* CharactersCollectionViewCell.swift in Sources */,
 				40BEAFD2212CC79F006D8B04 /* String+Thumbnail.swift in Sources */,
 				3A7D0C7C212B42AC00F393CE /* Constants.swift in Sources */,
+				40BEB008212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */,
 				3A7D0C8B212B4D2E00F393CE /* String+MD5.swift in Sources */,
 				3A7D0C82212B432E00F393CE /* CharactersAPI.swift in Sources */,
 				40BEAFC1212CBCB2006D8B04 /* CharacterDetailViewModel.swift in Sources */,
 				40BEAFC5212CBF2A006D8B04 /* Thumbnail.swift in Sources */,
-				40BEAFF2212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEAFF2212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */,
+				40BEB010212D8D23006D8B04 /* AppNavigationController.swift in Sources */,
 				3A7D0C67212B3FB800F393CE /* APIWorker.swift in Sources */,
 				3A7D0CC7212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0C6B212B3FCC00F393CE /* APIConfig.swift in Sources */,
 				40BEAFF7212CFB37006D8B04 /* String+Height.swift in Sources */,
 				3A7D0C15212B306E00F393CE /* AppDelegate.swift in Sources */,
 				3A7D0C9D212C144C00F393CE /* Characters.swift in Sources */,
+				40BEB00C212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */,
 				3A7D0CAD212C20CE00F393CE /* CharactersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,21 +690,29 @@
 				3A7D0C8C212B4D2E00F393CE /* String+MD5.swift in Sources */,
 				40BEAFDE212CD032006D8B04 /* CharacterDetailStickyHeader.swift in Sources */,
 				40BEAFEA212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */,
+				40BEAFFD212D8844006D8B04 /* AppCoordinator.swift in Sources */,
+				40BEB015212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */,
 				40BEAFE3212CD3D0006D8B04 /* CharacterDetailViewController.swift in Sources */,
+				40BEB005212D886C006D8B04 /* Coordinator.swift in Sources */,
+				40BEB01B212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEB023212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */,
 				3A7D0CB7212C22A600F393CE /* CharactersCollectionViewCell.swift in Sources */,
 				40BEAFD3212CC79F006D8B04 /* String+Thumbnail.swift in Sources */,
 				3A7D0C2A212B307100F393CE /* MarvelTests.swift in Sources */,
+				40BEB009212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */,
 				3A7D0CA3212C181000F393CE /* CharactersViewModel.swift in Sources */,
 				3A7D0C9E212C144C00F393CE /* Characters.swift in Sources */,
 				40BEAFC2212CBCB2006D8B04 /* CharacterDetailViewModel.swift in Sources */,
 				40BEAFC6212CBF2A006D8B04 /* Thumbnail.swift in Sources */,
-				40BEAFF3212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEAFF3212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */,
+				40BEB011212D8D23006D8B04 /* AppNavigationController.swift in Sources */,
 				3A7D0C87212B435D00F393CE /* CharactersRoutes.swift in Sources */,
 				3A7D0CC8212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0CAE212C20CE00F393CE /* CharactersViewController.swift in Sources */,
 				40BEAFF8212CFB37006D8B04 /* String+Height.swift in Sources */,
 				3A7D0C6C212B3FCC00F393CE /* APIConfig.swift in Sources */,
 				3A7D0C7D212B42AC00F393CE /* Constants.swift in Sources */,
+				40BEB00D212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */,
 				3A7D0C9A212B503600F393CE /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,21 +727,29 @@
 				3A7D0C8D212B4D2E00F393CE /* String+MD5.swift in Sources */,
 				40BEAFDF212CD032006D8B04 /* CharacterDetailStickyHeader.swift in Sources */,
 				40BEAFEB212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */,
+				40BEAFFE212D8844006D8B04 /* AppCoordinator.swift in Sources */,
+				40BEB016212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */,
 				40BEAFE4212CD3D0006D8B04 /* CharacterDetailViewController.swift in Sources */,
+				40BEB006212D886C006D8B04 /* Coordinator.swift in Sources */,
+				40BEB01C212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEB024212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */,
 				3A7D0CB8212C22A600F393CE /* CharactersCollectionViewCell.swift in Sources */,
 				40BEAFD4212CC79F006D8B04 /* String+Thumbnail.swift in Sources */,
 				3A7D0C35212B307100F393CE /* MarvelUITests.swift in Sources */,
+				40BEB00A212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */,
 				3A7D0CA4212C181000F393CE /* CharactersViewModel.swift in Sources */,
 				3A7D0C9F212C144C00F393CE /* Characters.swift in Sources */,
 				40BEAFC3212CBCB2006D8B04 /* CharacterDetailViewModel.swift in Sources */,
 				40BEAFC7212CBF2A006D8B04 /* Thumbnail.swift in Sources */,
-				40BEAFF4212CEA55006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
+				40BEAFF4212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */,
+				40BEB012212D8D23006D8B04 /* AppNavigationController.swift in Sources */,
 				3A7D0C88212B435D00F393CE /* CharactersRoutes.swift in Sources */,
 				3A7D0CC9212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0CAF212C20CE00F393CE /* CharactersViewController.swift in Sources */,
 				40BEAFF9212CFB37006D8B04 /* String+Height.swift in Sources */,
 				3A7D0C6D212B3FCC00F393CE /* APIConfig.swift in Sources */,
 				3A7D0C7E212B42AC00F393CE /* Constants.swift in Sources */,
+				40BEB00E212D8C0A006D8B04 /* CharacterDetailCoordinator.swift in Sources */,
 				3A7D0C9B212B503600F393CE /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

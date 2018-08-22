@@ -13,8 +13,14 @@ protocol CharactersViewModelDelegate: class {
     func onFetchFailed(with reason: String)
 }
 
+protocol CharactersViewModelCoordinatorDelegate: class
+{
+    func charactersViewModelDidSelectCharacter(_ character: Character)
+}
+
 class CharactersViewModel {
     private weak var delegate: CharactersViewModelDelegate?
+    weak var coordinatorDelegate: CharactersViewModelCoordinatorDelegate?
 
     private var characters: [Character] = []
     private var currentOffset = 0
@@ -62,6 +68,14 @@ class CharactersViewModel {
                     self.delegate?.onFetchFailed(with: error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    func selectItemAtIndex(_ index: Int)
+    {
+        if let coordinatorDelegate = coordinatorDelegate, index < characters.count {
+            let character = characters[index]
+            coordinatorDelegate.charactersViewModelDidSelectCharacter(character)
         }
     }
 }

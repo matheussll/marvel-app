@@ -19,7 +19,7 @@ class CharacterDetailStickyHeader: GSKStretchyHeaderView {
     override func awakeFromNib() {
         
         
-        self.contentView.backgroundColor = .red
+        self.contentView.backgroundColor = .marvelRed
         self.expansionMode = .topOnly
         self.minimumContentHeight = 64
         self.maximumContentHeight = 280

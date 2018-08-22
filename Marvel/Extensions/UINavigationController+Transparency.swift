@@ -18,9 +18,9 @@ extension UINavigationController {
                 self.navigationBar.backgroundColor = .clear
             } else {
                 self.navigationBar.setBackgroundImage(nil, for: .default)
-                self.navigationBar.barTintColor = .red
-                self.navigationBar.backgroundColor = .red
-                self.view.backgroundColor = .red
+                self.navigationBar.barTintColor = .marvelRed
+                self.navigationBar.backgroundColor = .marvelRed
+                self.view.backgroundColor = .marvelRed
                 self.navigationBar.isTranslucent = false
                 self.navigationBar.shadowImage = nil
             }

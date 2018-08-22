@@ -17,25 +17,33 @@ class CharactersViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var viewModel: CharactersViewModel!
+    var viewModel: CharactersViewModel!
     private var shouldShowLoadingCell = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupViews()
+        self.setupViewModel()
+    }
+    
+    func setupViews() {
+        let footerNib = UINib.init(nibName: CellIdentifiers.footer, bundle: nil)
+        self.collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: CellIdentifiers.footer)
         self.activityIndicator.startAnimating()
         self.activityIndicator.hidesWhenStopped = true
         self.collectionView.isHidden = true
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(UINib(nibName: CellIdentifiers.list, bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.list)
-        self.viewModel = CharactersViewModel(delegate: self)
-        self.viewModel.fetchCharacters()
-        self.setupViews()
     }
     
-    func setupViews() {
-        let footerNib = UINib.init(nibName: CellIdentifiers.footer, bundle: nil)
-        self.collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: CellIdentifiers.footer)
+    func setupViewModel() {
+        guard let viewModel = self.viewModel else {
+            self.viewModel = CharactersViewModel(delegate: self)
+            self.viewModel.fetchCharacters()
+            return
+        }
+        viewModel.fetchCharacters()
     }
 }
 
@@ -98,9 +106,7 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = CharacterDetailViewController()
-        vc.viewModel = CharacterDetailViewModel(character: viewModel.character(at: indexPath.row))
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.viewModel.selectItemAtIndex(indexPath.row)
     }
 }
 
@@ -112,6 +118,7 @@ extension CharactersViewController: CharactersViewModelDelegate {
     }
     
     func onFetchFailed(with reason: String) {
+        print(reason)
         self.activityIndicator.stopAnimating()
     }
 }
