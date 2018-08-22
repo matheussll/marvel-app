@@ -10,7 +10,7 @@ import Foundation
 
 fileprivate func getPlistValue(_ value: String) -> Any {
     guard let plist = Bundle.main.infoDictionary, let plistValue = plist[value] else {
-            return ""
+        return ""
     }
     return plistValue
 }

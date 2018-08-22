@@ -32,7 +32,6 @@ extension APIConfig {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
         }
-        print(urlRequest)
         return urlRequest
     }
 }

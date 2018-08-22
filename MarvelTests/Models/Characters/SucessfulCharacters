@@ -1,0 +1,30 @@
+{
+    "data": {
+        "offset":50,
+        "limit":20,
+        "total":1491,
+        "count":20,
+        "results": [
+            {
+            "id": 1011301,
+            "name": "Anole",
+            "description": "",
+            "thumbnail": {
+                "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/4c002e635ddd9",
+                "extension": "jpg"
+            },
+            "comics": {
+                "items": [
+                    {
+                    "resourceURI": "http://gateway.marvel.com/v1/public/comics/24173",
+                    "name": "Runaways (2008) #10"
+                    },
+                    {
+                    "resourceURI": "http://gateway.marvel.com/v1/public/comics/26970",
+                    "name": "Uncanny X-Men (1963) #517"
+                    }
+                ],
+            },
+        ]
+    }
+}

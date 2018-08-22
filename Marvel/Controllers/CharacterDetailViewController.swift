@@ -23,6 +23,7 @@ class CharacterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupStickyHeader()
+        self.setupTableView()
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -42,24 +43,29 @@ class CharacterDetailViewController: UIViewController {
         self.stretchyHeader = nibViews?.first as? CharacterDetailStickyHeader ?? CharacterDetailStickyHeader(frame: CGRect.zero)
         
         let url = URL(string: viewModel.characterImageUrl)
+        
         self.tableView.addSubview(self.stretchyHeader)
+        
         self.stretchyHeader?.characterImageView?.kf.indicatorType = .activity
         self.stretchyHeader?.characterImageView?.kf.setImage(with: url, options: [.transition(.fade(0.2))])
         self.stretchyHeader?.characterNameLabel?.text = viewModel.characterName
-        self.stretchyHeader?.characterDescriptionLabel?.text = viewModel.characterDescription
         self.edgesForExtendedLayout = .all
         self.extendedLayoutIncludesOpaqueBars = true
         self.stretchyHeader.manageScrollViewInsets = false
-        
+    }
+    
+    func setupTableView() {
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        let labelHeight = viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
         
-         let labelHeight = viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 190 + labelHeight)
         
-        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200 + labelHeight + (labelHeight > 0 ? 55 : 15))
-
         let view = CharacterDetailTableViewHeader(frame: frame)
+        view.backgroundColor = .darkGray
+        view.contentView.backgroundColor = .darkGray
         view.descriptionLabel.text = viewModel.characterDescription
         self.tableView.tableHeaderView = view
+        self.tableView.tableFooterView = UIView()
     }
 }
 
