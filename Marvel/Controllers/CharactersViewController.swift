@@ -11,6 +11,7 @@ import UIKit
 class CharactersViewController: UIViewController {
     private enum CellIdentifiers {
         static let list = "CharactersCollectionViewCell"
+        static let footer = "CollectionViewFooter"
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,8 +34,8 @@ class CharactersViewController: UIViewController {
     }
     
     func setupViews() {
-        let footerNib = UINib.init(nibName: "CollectionViewFooter", bundle: nil)
-        self.collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "CollectionViewFooter")
+        let footerNib = UINib.init(nibName: CellIdentifiers.footer, bundle: nil)
+        self.collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: CellIdentifiers.footer)
     }
 }
 
@@ -47,16 +48,14 @@ extension CharactersViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.list, for: indexPath) as? CharactersCollectionViewCell else {
             return UICollectionViewCell()
         }
-        if isLoadingCell(for: indexPath) {
-            cell.configure(with: .none)
-        } else {
-            cell.configure(with: viewModel.character(at: indexPath.row))
-        }
+
+        cell.configure(with: viewModel.character(at: indexPath.row))
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == self.viewModel.currentCount - 2 {
+        if indexPath.row == self.viewModel.currentCount - 2 && self.viewModel.currentCount != self.viewModel.totalCount {
             self.viewModel.fetchCharacters()
         }
 
@@ -69,7 +68,7 @@ extension CharactersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
             case UICollectionElementKindSectionFooter:
-                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionViewFooter", for: indexPath)
+                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellIdentifiers.footer, for: indexPath)
                 return footerView
             
             default: return UICollectionReusableView()
@@ -79,14 +78,15 @@ extension CharactersViewController: UICollectionViewDataSource {
 
 extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width/2.0 - 10
-        let height = width + 110
+        let width = collectionView.bounds.width/2.0 - 15
+        let height = width + 70
         let size = CGSize(width: width, height: height)
         return size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
+        print(section)
+        return UIEdgeInsets(top: 5, left: 10, bottom: 0, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -96,10 +96,16 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = CharacterDetailViewController()
+        vc.viewModel = CharacterDetailViewModel(character: viewModel.character(at: indexPath.row))
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension CharactersViewController: CharactersViewModelDelegate {
-    func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
+    func onFetchCompleted() {
         self.activityIndicator.stopAnimating()
         self.collectionView.isHidden = false
         self.collectionView.reloadData()
@@ -107,25 +113,5 @@ extension CharactersViewController: CharactersViewModelDelegate {
     
     func onFetchFailed(with reason: String) {
         self.activityIndicator.stopAnimating()
-    }
-}
-
-extension CharactersViewController: UICollectionViewDataSourcePrefetching {
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        if indexPaths.contains(where: isLoadingCell) {
-            viewModel.fetchCharacters()
-        }
-    }
-}
-
-private extension CharactersViewController {
-    func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= viewModel.currentCount
-    }
-    
-    func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
-        let indexPathsForVisibleRows = collectionView.indexPathsForVisibleItems
-        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
-        return Array(indexPathsIntersection)
     }
 }

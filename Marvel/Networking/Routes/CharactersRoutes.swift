@@ -11,28 +11,24 @@ import Alamofire
 
 enum CharactersRoutes: APIConfig {
     
-    // MARK: - Routes
     case list(offset: Int)
     
-    // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
             default: return .get
         }
     }
     
-    // MARK: - Path
     var path: String {
         switch self {
             case .list: return "/characters"
         }
     }
     
-    // MARK: - Parameters
     var parameters: Parameters? {
         switch self {
             case .list(let offset):
-                var params : [String: Any] = ["offset": offset]
+                var params : [String: Any] = ["offset": offset, "limit": 100]
                 params.merge(K.encodingParams) { (current, _) in current }
                 return params
         }

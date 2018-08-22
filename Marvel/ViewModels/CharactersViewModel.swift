@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CharactersViewModelDelegate: class {
-    func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
+    func onFetchCompleted()
     func onFetchFailed(with reason: String)
 }
 
@@ -50,17 +50,10 @@ class CharactersViewModel {
             case .success(let response):
                 DispatchQueue.main.async {
                     self.isFetchInProgress = false
-                    
                     self.currentOffset += response.count
                     self.total = response.total
                     self.characters.append(contentsOf: response.results)
-                    
-                    if response.offset > 0 {
-                        let indexPathsToReload = self.calculateIndexPathsToReload(from: response.results)
-                        self.delegate?.onFetchCompleted(with: indexPathsToReload)
-                    } else {
-                        self.delegate?.onFetchCompleted(with: .none)
-                    }
+                    self.delegate?.onFetchCompleted()
                 }
                 
             case .failure(let error):
@@ -71,11 +64,4 @@ class CharactersViewModel {
             }
         }
     }
-    
-    private func calculateIndexPathsToReload(from newCharacters: [Character]) -> [IndexPath] {
-        let startIndex = characters.count - newCharacters.count
-        let endIndex = startIndex + newCharacters.count
-        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
-    }
-    
 }
