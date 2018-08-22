@@ -16,18 +16,14 @@ protocol APIConfig: URLRequestConvertible {
 }
 
 extension APIConfig {
-    
-    // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
         let url = try K.baseURL.asURL()
         
         let encoding = URLEncoding.queryString
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
 
-        // HTTP Method
         urlRequest.httpMethod = method.rawValue
         
-        // Parameters
         if let parameters = parameters {
             do {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -36,6 +32,7 @@ extension APIConfig {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
         }
+        print(urlRequest)
         return urlRequest
     }
 }

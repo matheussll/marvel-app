@@ -8,47 +8,47 @@
 
 import Foundation
 
-struct Characters: Codable {
-    let offset: Int
-    let limit: Int
-    let total: Int
-    let count: Int
-    let results: [Character]
-    
-    enum CodingKeys: String, CodingKey {
-        case data
-        case offset
-        case limit
-        case total
-        case count
-        case results
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let data = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
-        offset = try data.decode(Int.self, forKey: .offset)
-        limit = try data.decode(Int.self, forKey: .limit)
-        total = try data.decode(Int.self, forKey: .total)
-        count = try data.decode(Int.self, forKey: .count)
-        results = try data.decode([Character].self, forKey: .results)
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        var data = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
-        try data.encode(offset, forKey: .offset)
-        try data.encode(limit, forKey: .limit)
-        try data.encode(total, forKey: .total)
-        try data.encode(count, forKey: .count)
-        try data.encode(results, forKey: .results)
-    }
-}
-
 struct Character: Codable {
     let id: Double
     let name: String
     let description: String
-    let modified: String
-    let resourceURI: String
+    let thumbnail: String
+    let comics: [Comic]
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case thumbnail
+        case comics
+        case items
+        case path
+        case type = "extension"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(Double.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        description = try container.decode(String.self, forKey: .description)
+        let nestedComics = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .comics)
+        comics = try nestedComics.decode([Comic].self, forKey: .items)
+        let thumb = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnail)
+        let path = try thumb.decode(String.self, forKey: .path)
+        let type = try thumb.decode(String.self, forKey: .type)
+        thumbnail = path + "." + type
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(description, forKey: .description)
+        try container.encode(thumbnail, forKey: .thumbnail)
+        var nestedComics = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .comics)
+        try nestedComics.encode(comics, forKey: .items)
+        var thumb = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnail)
+        try thumb.encode(thumbnail.parsedThumbnail.path, forKey: .path)
+        try thumb.encode(thumbnail.parsedThumbnail.type, forKey: .type)
+    }
 }
