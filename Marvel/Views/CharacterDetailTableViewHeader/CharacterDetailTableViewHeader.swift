@@ -11,7 +11,6 @@ import UIKit
 class CharacterDetailTableViewHeader: UIView {
 
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override init(frame: CGRect) {

@@ -10,19 +10,16 @@ import UIKit
 import GSKStretchyHeaderView
 
 class CharacterDetailStickyHeader: GSKStretchyHeaderView {
-
-    @IBOutlet weak var descriptionView: UIView!
-    @IBOutlet weak var characterDescriptionLabel: UILabel!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterImageView: UIImageView!
     
     override func awakeFromNib() {
-        
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
         
         self.contentView.backgroundColor = .marvelRed
         self.expansionMode = .topOnly
-        self.minimumContentHeight = 64
-        self.maximumContentHeight = 280
+        self.minimumContentHeight = 44 + statusBarHeight
+        self.maximumContentHeight = 196 + statusBarHeight
     }
 
     override func didChangeStretchFactor(_ stretchFactor: CGFloat) {

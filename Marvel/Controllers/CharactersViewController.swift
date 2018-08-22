@@ -93,7 +93,6 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        print(section)
         return UIEdgeInsets(top: 5, left: 10, bottom: 0, right: 10)
     }
     
@@ -118,7 +117,6 @@ extension CharactersViewController: CharactersViewModelDelegate {
     }
     
     func onFetchFailed(with reason: String) {
-        print(reason)
         self.activityIndicator.stopAnimating()
     }
 }
