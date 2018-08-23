@@ -140,6 +140,4 @@ extension CharactersViewController: ErrorViewDelegate {
         self.activityIndicator.startAnimating()
         self.viewModel.fetchCharacters()
     }
-    
-    
 }

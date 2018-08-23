@@ -63,7 +63,7 @@ class CharacterDetailViewController: UIViewController {
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         let labelHeight = self.viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
         
-        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 190 + labelHeight)
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200 + labelHeight)
         
         var headerFrame: CGRect!
         
@@ -79,6 +79,15 @@ class CharacterDetailViewController: UIViewController {
         view.descriptionLabel.text = self.viewModel.characterDescription
         self.tableView.tableHeaderView = view
         self.tableView.tableFooterView = UIView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if self.viewModel.comicsCount == 0 {
+            let tableHeaderHeight = self.tableView.tableHeaderView?.bounds.size.height ?? 0
+            let viewSize = self.view.bounds.size.height
+            self.tableView.setEmptyMessage("No comics available", offset: (tableHeaderHeight + viewSize)/2)
+        }
     }
 }
 
@@ -113,4 +122,3 @@ extension CharacterDetailViewController: UITableViewDataSource, UITableViewDeleg
         return 50
     }
 }
-

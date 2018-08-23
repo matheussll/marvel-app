@@ -28,7 +28,7 @@ enum CharactersRoutes: APIConfig {
     var parameters: Parameters? {
         switch self {
             case .list(let offset):
-                var params : [String: Any] = ["offset": offset, "limit": 100]
+                var params : [String: Any] = ["offset": offset, "limit": 50]
                 params.merge(K.encodingParams) { (current, _) in current }
                 return params
         }

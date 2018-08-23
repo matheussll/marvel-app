@@ -33,7 +33,10 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error ocurred, please try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-6m-ufw">
-                    <rect key="frame" x="50" y="251" width="275" height="37.5"/>
+                    <rect key="frame" x="87.5" y="251" width="200" height="37.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="oET-LP-ebz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                     <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -41,11 +44,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="VLj-6m-ufw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="Lq5-K7-4Bq"/>
                 <constraint firstItem="qmR-ig-3hT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ne3-Qs-0h8"/>
                 <constraint firstItem="qmR-ig-3hT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PvI-TL-LYn"/>
                 <constraint firstItem="qmR-ig-3hT" firstAttribute="top" secondItem="VLj-6m-ufw" secondAttribute="bottom" constant="35" id="aso-C4-lTs"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VLj-6m-ufw" secondAttribute="trailing" constant="50" id="cQt-7Y-4Rq"/>
+                <constraint firstItem="VLj-6m-ufw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gCB-O6-lC9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
