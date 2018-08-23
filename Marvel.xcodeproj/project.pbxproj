@@ -87,6 +87,10 @@
 		4034C50C212E660B00A94725 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C50B212E660B00A94725 /* EmptyView.swift */; };
 		4034C50D212E660B00A94725 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C50B212E660B00A94725 /* EmptyView.swift */; };
 		4034C50E212E660B00A94725 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C50B212E660B00A94725 /* EmptyView.swift */; };
+		4034C50F212E69C400A94725 /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C504212E5F8C00A94725 /* UITableView+Empty.swift */; };
+		4034C510212E69C500A94725 /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C504212E5F8C00A94725 /* UITableView+Empty.swift */; };
+		4034C513212E6AD200A94725 /* CharacterDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C512212E6AD200A94725 /* CharacterDetailViewModelTest.swift */; };
+		4034C516212E728700A94725 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4034C515212E728700A94725 /* StringTests.swift */; };
 		40BEAFBD212CB98E006D8B04 /* GSKStretchyHeaderView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEAFBC212CB98E006D8B04 /* GSKStretchyHeaderView.framework */; };
 		40BEAFBE212CB98E006D8B04 /* GSKStretchyHeaderView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEAFBC212CB98E006D8B04 /* GSKStretchyHeaderView.framework */; };
 		40BEAFBF212CB98E006D8B04 /* GSKStretchyHeaderView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEAFBC212CB98E006D8B04 /* GSKStretchyHeaderView.framework */; };
@@ -266,6 +270,8 @@
 		4034C504212E5F8C00A94725 /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		4034C507212E65B800A94725 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		4034C50B212E660B00A94725 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		4034C512212E6AD200A94725 /* CharacterDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModelTest.swift; sourceTree = "<group>"; };
+		4034C515212E728700A94725 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		40BEAFBC212CB98E006D8B04 /* GSKStretchyHeaderView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GSKStretchyHeaderView.framework; path = Carthage/Build/iOS/GSKStretchyHeaderView.framework; sourceTree = SOURCE_ROOT; };
 		40BEAFC0212CBCB2006D8B04 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		40BEAFCC212CBF5E006D8B04 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 		3A7D0C28212B307100F393CE /* MarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				4034C514212E727200A94725 /* Extensions */,
+				4034C511212E6AB000A94725 /* ViewModels */,
 				3A7D0CD4212DD81A00F393CE /* Models */,
 				3A7D0C29212B307100F393CE /* MarvelTests.swift */,
 				3A7D0C2B212B307100F393CE /* Info.plist */,
@@ -556,6 +564,22 @@
 				4034C50B212E660B00A94725 /* EmptyView.swift */,
 			);
 			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		4034C511212E6AB000A94725 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4034C512212E6AD200A94725 /* CharacterDetailViewModelTest.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4034C514212E727200A94725 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4034C515212E728700A94725 /* StringTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		40BEAFD5212CCFA0006D8B04 /* CharacterDetailStickyHeader */ = {
@@ -836,6 +860,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7D0C83212B432E00F393CE /* CharactersAPI.swift in Sources */,
+				4034C50F212E69C400A94725 /* UITableView+Empty.swift in Sources */,
 				40BEAFCE212CBF5E006D8B04 /* Comic.swift in Sources */,
 				3A7D0C68212B3FB800F393CE /* APIWorker.swift in Sources */,
 				3A7D0C8C212B4D2E00F393CE /* String+MD5.swift in Sources */,
@@ -845,6 +870,7 @@
 				40BEB015212D8DBB006D8B04 /* UIFont+AppFont.swift in Sources */,
 				40BEAFE3212CD3D0006D8B04 /* CharacterDetailViewController.swift in Sources */,
 				3A7D0CD6212DD83A00F393CE /* CharactersTest.swift in Sources */,
+				4034C513212E6AD200A94725 /* CharacterDetailViewModelTest.swift in Sources */,
 				40BEB005212D886C006D8B04 /* Coordinator.swift in Sources */,
 				40BEB01B212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift in Sources */,
 				40BEB023212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */,
@@ -857,6 +883,7 @@
 				40BEAFC2212CBCB2006D8B04 /* CharacterDetailViewModel.swift in Sources */,
 				40BEAFF3212CEA55006D8B04 /* CharacterDetailTableViewHeader.swift in Sources */,
 				3A7D0CE7212DE2E600F393CE /* ComicTest.swift in Sources */,
+				4034C516212E728700A94725 /* StringTests.swift in Sources */,
 				40BEB011212D8D23006D8B04 /* AppNavigationController.swift in Sources */,
 				3A7D0C87212B435D00F393CE /* CharactersRoutes.swift in Sources */,
 				40BEB039212E3403006D8B04 /* ErrorView.swift in Sources */,
@@ -881,6 +908,7 @@
 				40BEAFCF212CBF5E006D8B04 /* Comic.swift in Sources */,
 				3A7D0C69212B3FB800F393CE /* APIWorker.swift in Sources */,
 				3A7D0C8D212B4D2E00F393CE /* String+MD5.swift in Sources */,
+				4034C510212E69C500A94725 /* UITableView+Empty.swift in Sources */,
 				40BEAFDF212CD032006D8B04 /* CharacterDetailStickyHeader.swift in Sources */,
 				40BEAFEB212CD4F4006D8B04 /* UINavigationController+Transparency.swift in Sources */,
 				40BEAFFE212D8844006D8B04 /* AppCoordinator.swift in Sources */,
@@ -1114,6 +1142,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1141,6 +1170,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1166,6 +1196,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MarvelUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1192,6 +1223,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MarvelUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class CharacterDetailViewModel {
     private var character: Character!
     

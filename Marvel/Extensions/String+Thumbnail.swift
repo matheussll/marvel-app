@@ -14,7 +14,7 @@ extension String {
         }
         
         let type = String(self[range.upperBound...])
-        let path = String(self[...range.lowerBound])
+        let path = String(self[...range.lowerBound].dropLast())
         return (path, type)
     }
 }
