@@ -11,7 +11,10 @@ import GSKStretchyHeaderView
 import Kingfisher
 
 class CharacterDetailViewController: UIViewController {
-
+    private enum CellIdentifiers {
+        static let detail = "CharacterDetailTableViewCell"
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     var stretchyHeader: CharacterDetailStickyHeader!
     var viewModel: CharacterDetailViewModel!
@@ -55,25 +58,46 @@ class CharacterDetailViewController: UIViewController {
     }
     
     func setupTableView() {
+        self.tableView.register(UINib(nibName: CellIdentifiers.detail, bundle: nil), forCellReuseIdentifier: CellIdentifiers.detail)
+        
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        let labelHeight = viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
+        let labelHeight = self.viewModel.characterDescription.heightWithConstrainedWidth(width: self.view.frame.width, font: UIFont.appFont(size: 15))
         
-        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 190 + labelHeight)
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200 + labelHeight)
         
-        let view = CharacterDetailTableViewHeader(frame: frame)
+        var headerFrame: CGRect!
+        
+        if self.viewModel.characterDescription.isEmpty {
+            headerFrame = self.stretchyHeader.frame
+        } else {
+            headerFrame = frame
+        }
+        
+        let view = CharacterDetailTableViewHeader(frame: headerFrame)
         view.backgroundColor = .darkGray
         view.contentView.backgroundColor = .darkGray
-        view.descriptionLabel.text = viewModel.characterDescription
+        view.descriptionLabel.text = self.viewModel.characterDescription
         self.tableView.tableHeaderView = view
         self.tableView.tableFooterView = UIView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if self.viewModel.comicsCount == 0 {
+            let tableHeaderHeight = self.tableView.tableHeaderView?.bounds.size.height ?? 0
+            let viewSize = self.view.bounds.size.height
+            self.tableView.setEmptyMessage("No comics available", offset: (tableHeaderHeight + viewSize)/2)
+        }
     }
 }
 
 extension CharacterDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.detail) as? CharacterDetailTableViewCell else {
+            return UITableViewCell()
+        }
         let comic = viewModel.characterComic(at: indexPath.row)
-        cell.textLabel?.text = comic.name
+        cell.titleLabel?.text = comic.name
         return cell
     }
     
@@ -86,7 +110,7 @@ extension CharacterDetailViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -98,4 +122,3 @@ extension CharacterDetailViewController: UITableViewDataSource, UITableViewDeleg
         return 50
     }
 }
-
