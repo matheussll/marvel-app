@@ -32,7 +32,7 @@
                         <action selector="refresh:" destination="-1" eventType="touchUpInside" id="6SK-dO-wWV"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error ocurred, please try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-6m-ufw">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error has occurred, please try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-6m-ufw">
                     <rect key="frame" x="87.5" y="251" width="200" height="37.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="oET-LP-ebz"/>
