@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="Marvel" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Aoy-Wf-fIM"/>
+                <outlet property="errorLabel" destination="VLj-6m-ufw" id="6zR-Fr-6tY"/>
+                <outlet property="refreshButton" destination="qmR-ig-3hT" id="UeT-vC-hhV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmR-ig-3hT">
+                    <rect key="frame" x="167.5" y="323.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="7pz-cj-7Md"/>
+                        <constraint firstAttribute="height" constant="40" id="EER-xy-LOh"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="refreshIcon"/>
+                    <connections>
+                        <action selector="refresh:" destination="-1" eventType="touchUpInside" id="6SK-dO-wWV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error ocurred, please try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-6m-ufw">
+                    <rect key="frame" x="50" y="251" width="275" height="37.5"/>
+                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                    <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VLj-6m-ufw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="Lq5-K7-4Bq"/>
+                <constraint firstItem="qmR-ig-3hT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ne3-Qs-0h8"/>
+                <constraint firstItem="qmR-ig-3hT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PvI-TL-LYn"/>
+                <constraint firstItem="qmR-ig-3hT" firstAttribute="top" secondItem="VLj-6m-ufw" secondAttribute="bottom" constant="35" id="aso-C4-lTs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VLj-6m-ufw" secondAttribute="trailing" constant="50" id="cQt-7Y-4Rq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refreshIcon" width="85" height="85"/>
+    </resources>
+</document>

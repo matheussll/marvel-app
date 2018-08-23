@@ -144,6 +144,18 @@
 		40BEB022212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
 		40BEB023212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
 		40BEB024212D9A44006D8B04 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */; };
+		40BEB028212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB026212E2083006D8B04 /* CharacterDetailTableViewCell.swift */; };
+		40BEB029212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB026212E2083006D8B04 /* CharacterDetailTableViewCell.swift */; };
+		40BEB02A212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB026212E2083006D8B04 /* CharacterDetailTableViewCell.swift */; };
+		40BEB02B212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB027212E2083006D8B04 /* CharacterDetailTableViewCell.xib */; };
+		40BEB02C212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB027212E2083006D8B04 /* CharacterDetailTableViewCell.xib */; };
+		40BEB02D212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB027212E2083006D8B04 /* CharacterDetailTableViewCell.xib */; };
+		40BEB034212E32CD006D8B04 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB033212E32CD006D8B04 /* ErrorView.xib */; };
+		40BEB035212E32CD006D8B04 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB033212E32CD006D8B04 /* ErrorView.xib */; };
+		40BEB036212E32CD006D8B04 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BEB033212E32CD006D8B04 /* ErrorView.xib */; };
+		40BEB038212E3403006D8B04 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB037212E3403006D8B04 /* ErrorView.swift */; };
+		40BEB039212E3403006D8B04 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB037212E3403006D8B04 /* ErrorView.swift */; };
+		40BEB03A212E3403006D8B04 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BEB037212E3403006D8B04 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +277,10 @@
 		40BEB019212D9188006D8B04 /* CharacterDetailTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		40BEB01D212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewSectionHeader.xib; sourceTree = "<group>"; };
 		40BEB021212D9A44006D8B04 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		40BEB026212E2083006D8B04 /* CharacterDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewCell.swift; sourceTree = "<group>"; };
+		40BEB027212E2083006D8B04 /* CharacterDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewCell.xib; sourceTree = "<group>"; };
+		40BEB033212E32CD006D8B04 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		40BEB037212E3403006D8B04 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -451,6 +467,8 @@
 		3A7D0CA9212C209800F393CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40BEB032212E329C006D8B04 /* ErrorView */,
+				40BEB025212E2051006D8B04 /* CharacterDetailTableViewCell */,
 				40BEB017212D915B006D8B04 /* CharacterDetailTableViewSectionHeader */,
 				40BEAFEC212CEA14006D8B04 /* CharacterDetailTableViewHeader */,
 				40BEAFD6212CCFE4006D8B04 /* CollectionViewFooter */,
@@ -566,6 +584,24 @@
 			path = CharacterDetailTableViewSectionHeader;
 			sourceTree = "<group>";
 		};
+		40BEB025212E2051006D8B04 /* CharacterDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				40BEB026212E2083006D8B04 /* CharacterDetailTableViewCell.swift */,
+				40BEB027212E2083006D8B04 /* CharacterDetailTableViewCell.xib */,
+			);
+			path = CharacterDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		40BEB032212E329C006D8B04 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				40BEB033212E32CD006D8B04 /* ErrorView.xib */,
+				40BEB037212E3403006D8B04 /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,6 +715,8 @@
 				3A7D0CB9212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCA212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
 				40BEAFD9212CD026006D8B04 /* CharacterDetailStickyHeader.xib in Resources */,
+				40BEB034212E32CD006D8B04 /* ErrorView.xib in Resources */,
+				40BEB02B212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */,
 				40BEAFEE212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
 				40BEAFE5212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
 				3A7D0CB0212C20CE00F393CE /* CharactersViewController.xib in Resources */,
@@ -699,10 +737,12 @@
 				3A7D0CBA212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCB212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
 				40BEAFEF212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
+				40BEB02C212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */,
 				3A7D0CE4212DE1F600F393CE /* SuccessfulCharacter.json in Resources */,
 				3A7D0CDA212DDC4500F393CE /* SuccessfulCharacters.json in Resources */,
 				3A7D0D00212DEE7A00F393CE /* Info.plist in Resources */,
 				40BEAFE6212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
+				40BEB035212E32CD006D8B04 /* ErrorView.xib in Resources */,
 				3A7D0CB1212C20CE00F393CE /* CharactersViewController.xib in Resources */,
 				3A7D0CDE212DE04600F393CE /* WrongParamsCharacters.json in Resources */,
 			);
@@ -712,11 +752,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BEB02D212E2083006D8B04 /* CharacterDetailTableViewCell.xib in Resources */,
 				40BEAFDB212CD026006D8B04 /* CharacterDetailStickyHeader.xib in Resources */,
 				40BEB020212D9197006D8B04 /* CharacterDetailTableViewSectionHeader.xib in Resources */,
 				3A7D0CBB212C22A600F393CE /* CharactersCollectionViewCell.xib in Resources */,
 				3A7D0CCC212C6A6B00F393CE /* CollectionViewFooter.xib in Resources */,
 				40BEAFF0212CEA3B006D8B04 /* CharacterDetailTableViewHeader.xib in Resources */,
+				40BEB036212E32CD006D8B04 /* ErrorView.xib in Resources */,
 				40BEAFE7212CD3D0006D8B04 /* CharacterDetailViewController.xib in Resources */,
 				3A7D0CB2212C20CE00F393CE /* CharactersViewController.xib in Resources */,
 			);
@@ -744,6 +786,7 @@
 				3A7D0CB6212C22A600F393CE /* CharactersCollectionViewCell.swift in Sources */,
 				40BEAFD2212CC79F006D8B04 /* String+Thumbnail.swift in Sources */,
 				3A7D0C7C212B42AC00F393CE /* Constants.swift in Sources */,
+				40BEB038212E3403006D8B04 /* ErrorView.swift in Sources */,
 				40BEB008212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */,
 				3A7D0C8B212B4D2E00F393CE /* String+MD5.swift in Sources */,
 				3A7D0C82212B432E00F393CE /* CharactersAPI.swift in Sources */,
@@ -753,6 +796,7 @@
 				3A7D0C67212B3FB800F393CE /* APIWorker.swift in Sources */,
 				3A7D0CC7212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0C6B212B3FCC00F393CE /* APIConfig.swift in Sources */,
+				40BEB028212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */,
 				40BEAFF7212CFB37006D8B04 /* String+Height.swift in Sources */,
 				3A7D0C15212B306E00F393CE /* AppDelegate.swift in Sources */,
 				3A7D0C9D212C144C00F393CE /* Characters.swift in Sources */,
@@ -789,9 +833,11 @@
 				3A7D0CE7212DE2E600F393CE /* ComicTest.swift in Sources */,
 				40BEB011212D8D23006D8B04 /* AppNavigationController.swift in Sources */,
 				3A7D0C87212B435D00F393CE /* CharactersRoutes.swift in Sources */,
+				40BEB039212E3403006D8B04 /* ErrorView.swift in Sources */,
 				3A7D0CC8212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0CAE212C20CE00F393CE /* CharactersViewController.swift in Sources */,
 				40BEAFF8212CFB37006D8B04 /* String+Height.swift in Sources */,
+				40BEB029212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */,
 				3A7D0CE2212DE1B200F393CE /* CharacterTest.swift in Sources */,
 				3A7D0C6C212B3FCC00F393CE /* APIConfig.swift in Sources */,
 				3A7D0C7D212B42AC00F393CE /* Constants.swift in Sources */,
@@ -819,6 +865,7 @@
 				3A7D0CB8212C22A600F393CE /* CharactersCollectionViewCell.swift in Sources */,
 				40BEAFD4212CC79F006D8B04 /* String+Thumbnail.swift in Sources */,
 				3A7D0C35212B307100F393CE /* MarvelUITests.swift in Sources */,
+				40BEB03A212E3403006D8B04 /* ErrorView.swift in Sources */,
 				40BEB00A212D88A9006D8B04 /* CharactersCoordinator.swift in Sources */,
 				3A7D0CA4212C181000F393CE /* CharactersViewModel.swift in Sources */,
 				3A7D0C9F212C144C00F393CE /* Characters.swift in Sources */,
@@ -828,6 +875,7 @@
 				3A7D0C88212B435D00F393CE /* CharactersRoutes.swift in Sources */,
 				3A7D0CC9212C6A6B00F393CE /* CollectionViewFooter.swift in Sources */,
 				3A7D0CAF212C20CE00F393CE /* CharactersViewController.swift in Sources */,
+				40BEB02A212E2083006D8B04 /* CharacterDetailTableViewCell.swift in Sources */,
 				40BEAFF9212CFB37006D8B04 /* String+Height.swift in Sources */,
 				3A7D0C6D212B3FCC00F393CE /* APIConfig.swift in Sources */,
 				3A7D0C7E212B42AC00F393CE /* Constants.swift in Sources */,

@@ -18,12 +18,18 @@ class CharactersViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: CharactersViewModel!
+    var errorView: ErrorView!
     private var shouldShowLoadingCell = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
         self.setupViewModel()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.errorView.frame = self.view.bounds
     }
     
     func setupViews() {
@@ -35,6 +41,11 @@ class CharactersViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(UINib(nibName: CellIdentifiers.list, bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.list)
+
+        self.errorView = ErrorView()
+        self.errorView.isHidden = true
+        self.errorView.delegate = self
+        self.view.addSubview(self.errorView)
     }
     
     func setupViewModel() {
@@ -117,6 +128,18 @@ extension CharactersViewController: CharactersViewModelDelegate {
     }
     
     func onFetchFailed(with reason: String) {
+        self.collectionView.isHidden = true
         self.activityIndicator.stopAnimating()
+        self.errorView.isHidden = false
     }
+}
+
+extension CharactersViewController: ErrorViewDelegate {
+    func onErrorViewRefresh() {
+        self.errorView.isHidden = true
+        self.activityIndicator.startAnimating()
+        self.viewModel.fetchCharacters()
+    }
+    
+    
 }
