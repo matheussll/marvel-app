@@ -1,0 +1,21 @@
+{
+    "id": 1,
+    "name": "Test1",
+    "description": "test2",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/20/test1",
+        "extension": "jpg"
+    },
+    "comics": {
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/test1",
+                "name": "Runaways (2008) #10"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/test12",
+                "name": "Uncanny X-Men (1963) #517"
+            }
+        ]
+    }
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CharacterDetailStickyHeader" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0KI-SK-PUs">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDs-dv-hpI">
+                    <rect key="frame" x="10" y="199" width="355" height="19"/>
+                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-fZ-Lxz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pDs-dv-hpI" firstAttribute="top" secondItem="0KI-SK-PUs" secondAttribute="bottom" constant="-30" id="7Lh-7I-wta"/>
+                <constraint firstItem="4kq-fZ-Lxz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EGj-uU-kaZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0KI-SK-PUs" secondAttribute="bottom" id="Gbn-0p-v8e"/>
+                <constraint firstItem="0KI-SK-PUs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Hot-r4-B2b"/>
+                <constraint firstItem="0KI-SK-PUs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ld4-4K-wGb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4kq-fZ-Lxz" secondAttribute="trailing" id="SUM-An-I2I"/>
+                <constraint firstItem="4kq-fZ-Lxz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cxh-Qf-rRl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pDs-dv-hpI" secondAttribute="trailing" constant="10" id="dqo-6P-AVu"/>
+                <constraint firstItem="4kq-fZ-Lxz" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="hXS-zK-59S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0KI-SK-PUs" secondAttribute="trailing" id="jSz-u0-ljq"/>
+                <constraint firstItem="pDs-dv-hpI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mxb-7a-gqf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="maximumContentHeight">
+                    <real key="value" value="260"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="minimumContentHeight">
+                    <real key="value" value="64"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="characterImageView" destination="0KI-SK-PUs" id="7FO-Ga-KDJ"/>
+                <outlet property="characterNameLabel" destination="pDs-dv-hpI" id="YOY-bi-N5D"/>
+                <outlet property="overlayView" destination="4kq-fZ-Lxz" id="ShY-r1-OjD"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-53.5"/>
+        </view>
+    </objects>
+</document>
